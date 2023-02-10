@@ -421,6 +421,10 @@
     color: red;
   }
 
+  .fullname{
+    display: flex;
+  }
+
   .name{
     height: 30px;
   }
@@ -1094,15 +1098,16 @@ textarea {
     margin: 10px;
   }
 
-  .firstname + .name::after{
-    content: "\A";
-     white-space: pre;
+  .firstname{
+    display: block;
+    margin-bottom: 5px;
   }
 
 
-
   .name{
+    width: 70%;
     height: 20px;
+    font-size: 16px;
   }
 
   .path{

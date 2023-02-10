@@ -295,8 +295,14 @@
         <form>
           <h3>会員登録フォーム</h3>
           <h4>氏名</h4>
-          <label class="firstname">姓</label><input class="name" type="text" placeholder="例：山田">
-          <label>名</label><input class="name" type="text" placeholder="例：太郎"><br>
+          <div class="fullname">
+            <div class="firstname">
+              <label>姓</label><input class="name" type="text" placeholder="例：山田">
+            </div>
+            <div class="lastname">
+              <label>名</label><input class="name" type="text" placeholder="例：太郎"><br>
+            </div>
+          </div>
           <h4>性別</h4>
           <label>男性</label><input type="radio" name="gender">
           <label>女性</label><input type="radio" name="gender">
