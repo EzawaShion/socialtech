@@ -6,6 +6,9 @@
   <meta name="description" content="SocialTechはEdTech業界のリーディングカンパニーを目指します。">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+
 </head>
 <body>
   <header>
@@ -49,13 +52,25 @@
   </header>
   <main>
     <article>
-      <!-- main-visual -->
-      <section id="main-visual">
-        <div id="main-message">
-          <h1>WORLD PEACE</h1>
-          <p>IT教育で世界平和を実現する</p>
+      <!-- カルーセル -->
+      <section id="carousel-section">
+        <div class="carousel">
+          <div>
+            <a href="index.html">
+            <img class="carouselImg" src="images/carousel1.png">
+          </a>
+          </div>
+          <div>
+            <a href="mission.html">
+            <img class="carouselImg" src="images/carousel2.png">
+            </a>
+          </div>
+          <div>
+            <a href="product.html">
+            <img class="carouselImg" src="images/carousel3.png">
+            </a>
+          </div>
         </div>
-        <img src="images/index/index-main.png" alt="PCの周りに集まる多国籍の仲間たち">
       </section>
       <!-- mission -->
       <section id="mission">
@@ -75,7 +90,7 @@
               国連が掲げる「Sustainable Development Goals(持続可能な開発目標)」に含まれる17つのグローバル目標のうち、以下の5つの目標の実現をミッションとしてサービスを展開しています。
             </p>
             <a href="mission.html">
-              <img src="images/button-more.png" alt="もっと見る">
+              <img class="button-more" src="images/button-more.png" alt="もっと見る">
             </a>
           </div>
         </div>
@@ -123,7 +138,7 @@
         </div>
         <div>
           <a id="product-more" href="product.html">
-            <img src="images/button-more.png" alt="もっとみる">
+            <img class="button-more" src="images/button-more.png" alt="もっとみる">
           </a>
         </div>
       </section>
@@ -292,34 +307,34 @@
       <section id="contact">
         <h2 class="index-h2">CONTACT</h2>
       <div class="form">
-        <form action="https://api.staticforms.xyz/submit" method="post">
+        <form id="realForm">
           <input type="text" name="honeypot" style="display:none">
           <input type="hidden" name="accessKey" value="fae807b6-5884-47e9-873d-488c95850790">
           <input type="hidden" name="subject" value="Contact us from - example.com" />
           <input type="hidden" name="replyTo" value="shion0423e@gmail.com">
-          <input type="hidden" name="redirectTo" value="/Users/ezawashion/Desktop/socialtech/index.html">
+          <input type="hidden" name="redirectTo" value="">
           <h3>会員登録フォーム</h3>
           <h4>氏名</h4>
           <div class="fullname">
             <div class="firstname">
-              <label>姓</label><input class="name" type="text" placeholder="例：山田">
+              <label>姓</label><input id="firstName" class="name" name="name" type="text" placeholder="例：山田">
             </div>
             <div class="lastname">
-              <label>名</label><input class="name" type="text" placeholder="例：太郎"><br>
+              <label>名</label><input id="lastName" class="name" name="name" type="text" placeholder="例：太郎"><br>
             </div>
           </div>
           <h4>性別</h4>
-          <label>男性</label><input type="radio" name="gender">
-          <label>女性</label><input type="radio" name="gender">
-          <label>その他</label><input type="radio" name="gender">
+          <label>男性</label><input type="radio" name="gender" value="man" checked>
+          <label>女性</label><input type="radio" name="gender" value="woman">
+          <label>その他</label><input type="radio" name="gender" value="other">
           <h4>電話番号</h4>
-          <input type="tel" class="path" name="tel">
+          <input id="tel" type="tel" class="path" name="tel">
           <h4>メールアドレス</h4>
-          <input class="path" type="text" placeholder="例:abc@def"><br>
+          <input id="email" class="path" type="text" placeholder="例:abc@def.com"><br>
           <h4>パスワード</h4>
-          <input class="path" type="password">
+          <input id="password" class="path" type="password">
           <h4>生年月日</h4>
-          <input type="date" class="date" name="date">
+          <input id="birthday" type="date" class="date" name="date">
           <h4><span>その他</span></h4>
           <textarea></textarea><br>
           <br>
@@ -356,15 +371,14 @@
                       お客様がご自身の個人情報を弊社に提供されるか否かは、お客様のご判断によりますが、もしご提供されない場合には、適切なサービスが提供できない場合がありますので予めご了承ください。
                     </div>
                   </details>
-                  <div class="check">
-                  <input type="checkbox" name="agree">
+                  <div class="check-box">
+                  <input id="check" type="checkbox" name="agree">
                   <span >個人情報の取り扱いについてご同意いただける場合は、チェックしてください</span>
                   </div>
                 </div>
               </div>
           <div class="btn">
-            <input class="in-btn" type="submit" value="送信">
-            <input class="in-btn" type="reset" value="リセット">
+            <input class="submit" type="image" src="images/button-submit.png" alt="送信する">
           </div>
         </form>
       </div>
@@ -391,6 +405,10 @@
       </div>
     </footer>
   </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 
 </html>

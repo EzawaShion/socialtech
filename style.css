@@ -8,6 +8,11 @@
 /* pc */
   @media screen and (min-width: 768px){
 
+  .carousel{
+    width: 885px;
+    margin-left: 20px;
+  }
+
   body {
     max-width: 1080px;
     min-width: 960px;
@@ -421,6 +426,10 @@
     color: red;
   }
 
+  form h4 span{
+    color: #000000;
+  }
+
   .fullname{
     display: flex;
   }
@@ -455,34 +464,31 @@ textarea {
     font-weight: bold;
 }
 
-.check {
+.check-box {
     margin-top: 20px;
 }
 
-.in-btn:hover{
+.reset:hover{
   font-weight: bold;
   cursor: pointer;
 }
 
-.in-btn:active{
+.reset:active{
   box-shadow: none;
   position: relative;
   top: 2px;
   left: 2px;
 }
 
-.in-btn {
-    box-shadow: 2px 2px rgb(139 139 139);
-    margin-right: 5px;
-    border-radius: 5px;
-    padding: 5px 20px;
-}
 
 
 .btn {
-    text-align: right;
+    text-align: center;
     margin-top: 20px;
+    position: relative;
 }
+
+
 
 
   
@@ -742,6 +748,16 @@ textarea {
     margin: 0;
   }
 
+  .carousel {
+    width: 375px;
+    margin: 0 auto;
+  }
+
+  .carouselImg {
+    width: 375px;
+  }
+
+
   /* PC用ナビゲーション非表示 */
   #nav-pc {
     display: none;
@@ -749,8 +765,9 @@ textarea {
 
   /* ハンバーガーメニュー */
   #menu-sp {
-    float: right;
-    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 
   #nav-sp{
@@ -1151,28 +1168,10 @@ textarea {
     margin-top: 20px;
   }
 
-  .in-btn:hover{
-  font-weight: bold;
-  cursor: pointer;
-  }
-
-  .in-btn:active{
-  box-shadow: none;
-  position: relative;
-  top: 2px;
-  left: 2px;
-  } 
-
-  .in-btn {
-    box-shadow: 2px 2px rgb(139 139 139);
-    margin-right: 5px;
-    border-radius: 5px;
-    padding: 3px 10px;
-  }
 
 
   .btn {
-    text-align: right;
+    text-align: center;
     margin-top: 20px;
    }
 
